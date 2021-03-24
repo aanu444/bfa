@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+$headerColor: rgba(233,24,160, 0.3);
+$navColor: #3c2f37;
+$aboutTextColor:#3b102c;
+
+@mixin flexRow{
+    display:flex;
+    flex-wrap:row nowrap;
+}
+
+@mixin fontRoboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin cursiveFont{
+    font-family: 'Cedarville Cursive', cursive;
+}
+
+@mixin cursiveFontTwo{
+    font-family: 'Dancing Script', cursive;
+}
+
+*{
+    ::before,::after{
+        box-sizing:border-box;
+    }
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-size:1rem;
+}
+
+div{
+    border:0px solid black;
+}
+
+nav{
+    .nav{
+        @include flexRow;
+        min-height:50px;
+
+        .links{
+            flex-basis:100%;
+            background-color:$navColor;
+
+            ul{
+                list-style-type: none;
+                @include fontRoboto;
+                li{
+                    display:inline;
+                    margin-left:50px;
+                    
+                    a{
+                        color:#fff;
+                        text-decoration:none;
+                    }
+                }
+                li:first-child{
+                    margin-left:300px;
+                }
+            }
+        }
+    }
+}
+
+header{
+    .header{
+        @include flexRow;
+        background:url("../images/header.jpg");
+        background-size:cover;
+        background-repeat:no-repeat;
+        height:450px;
+
+        .header-content{
+            flex-basis:100%;
+            background-color:$headerColor;
+            
+            img{
+                width:20%;
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+            }
+
+            p{
+                text-align:center;
+                @include cursiveFont;
+                font-weight:bolder;
+                font-size:2rem;
+                border:1px solid #fff;
+                background-color:#fff;
+                margin-top:0;
+            }
+        }
+    }
+}
+
+section{
+    background-color:#d7ccd3;
+    .about{
+        @include flexRow;
+        margin-left:40px;
+        margin-right:40px;
+        min-height:400px;
+
+        .content{
+            flex-basis:60%;
+            background-color:#fff;
+
+            h1{
+                @include cursiveFontTwo;
+                text-align:center;
+                font-size:6rem;
+            }
+
+            P{
+                @include fontRoboto;
+                color:$aboutTextColor;
+                text-align:center;
+                font-weight:bold;
+                font-size:1.5rem;
+                margin-top:-60px;
+            }
+
+            span{
+                display:block;
+                @include fontRoboto;
+                font-size:1.3rem;
+                margin-top:-10px;
+                text-align:center;
+                margin-left:100px;
+                margin-right:100px;
+            }
+        }
+
+        .image{
+            flex-basis:40%;
+            background:url("../images/boldwoman.jpg");
+            background-size:cover;
+        }
+
+    }
+
+    .books{
+        @include flexRow;
+        min-height:100px;
+        margin-left:40px;
+        margin-right:40px;
+
+        .content{
+            flex-basis:25%;
+            background-color:#fff;
+
+            h1{
+                @include fontRoboto;
+                color:$aboutTextColor;
+                margin-left:20px;
+                font-weight:bold;
+                font-size:3rem;
+            }
+
+            h3{
+                @include cursiveFontTwo;
+                font-size:2rem;
+                color:$aboutTextColor;
+                font-weight:bold;
+                margin-left:20px;
+                margin-top:-20px;
+            }
+
+            p{
+                font-weight:bolder;
+                @include fontRoboto;
+                font-size:1rem;
+                margin-left:10px;
+                margin-top:-20px;
+                color:$aboutTextColor;
+                padding:10px;
+            }
+        }
+
+        .image{
+            flex-basis:25%;
+            background-color:#fff;
+
+            img{
+                width:100%;
+                margin-top:50px;
+            }
+
+            p{
+                text-align:center;
+                a{
+                    text-decoration:none;
+                    font-size:1rem;
+                    color:$aboutTextColor;
+                    font-weight:bold;
+                    @include fontRoboto;
+                }
+            }
+        }
+
+    }
+
+    .videos{
+        @include flexRow;
+        min-height:100px;
+        margin-left:40px;
+        margin-right:40px;
+        background-color:#fff;
+
+        .content{
+            flex-basis:100%;
+            
+
+            h1{
+                color:$aboutTextColor;
+                @include cursiveFontTwo;
+                font-weight:bolder;
+                text-align:center;
+                font-size:4rem;
+                margin-bottom:0;
+            }
+        }
+
+        .visual{
+            flex-basis:50%;
+            height:450px;
+
+            iframe{
+                width:80%;
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+            }
+        }
+    }
+}
+
+footer{
+    background-color:$navColor;
+
+    .connect{
+        @include flexRow;
+        min-height:100px;
+
+        .content{
+            flex-basis:30%;
+            color:#fff;
+
+            h2{
+                @include fontRoboto;
+                font-weight:lighter;
+                font-size:1.1rem;
+                margin-left:40px;
+                margin-top:250px;
+            }
+
+            p{
+                @include cursiveFontTwo;
+                font-weight:bolder;
+                font-size:3rem;
+                margin-left:40px;
+                margin-top:-15px;
+            }
+
+            span{
+                @include fontRoboto;
+                display:block;
+                font-weight:lighter;
+                padding:10px;
+                font-size:1.3rem;
+                margin-left:40px;
+                margin-top:-40px;
+            }
+        }
+
+        .text-image{
+            flex-basis:70%;
+
+
+            .text-cover{
+                @include flexRow;
+                width:70%;
+                margin:0 auto;
+                background-color:#fff;
+                min-height:100px;
+
+                .image{
+                    flex-basis:40%;
+
+                    img{
+                        width:100%;
+                        height:100%;
+                    }
+                }
+
+                .content{
+                    flex-basis:60%;
+
+                    p{
+                        text-align:center;
+                        padding:20px;
+                        @include fontRoboto;
+                        font-weight:bold;
+                        font-size:1rem;
+                        color:#000000;
+                        margin-top:40px;
+                    }
+
+                    button{
+                        background-color:$aboutTextColor;
+                        padding:10px;
+                        border-radius:10px;
+                        display:block;
+                        margin-left:auto;
+                        margin-right:auto;
+                        border:1px solid $aboutTextColor;
+
+                        a{
+                            text-decoration:none;
+                            color:#fff;
+                            font-weight:bold;
+                            @Include fontRoboto;
+                        }
+                    }
+
+                }
+            }
+
+            .text-cover:first-child{
+                margin-top:30px;
+            }
+        }
+    }
+
+    .services{
+        @include flexRow;
+        height:400px;
+        background-color:#fff;
+        
+        .content{
+            flex-basis:50%;
+
+            h1{
+                @include cursiveFontTwo;
+                text-align:center;
+                margin-top:40px;
+                font-size:4rem;
+                font-weight:bolder;
+                color:#3b102c;
+                margin-bottom:0;
+            }
+
+            p{
+                @include fontRoboto;
+                text-align:center;
+                font-weight:bold;
+                font-size:1.5rem;
+            }
+
+            span{
+                display:block;
+                text-align:center;
+                font-weight:lighter;
+                padding:10px;
+                color:#3b102c;
+                font-size:1.4rem;
+                @include fontRoboto;
+            }
+        }
+
+        .image{
+            flex-basis:50%;
+            background-image:url("../images/head.jpg");
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+    }
+
+    .contact{
+        @include flexRow;
+        background-color:#fff;
+        height:500px;
+
+        .image{
+            flex-basis:50%;
+            background:url("../images/call.jpg");
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+
+        .content{
+            flex-basis:50%;
+        }
+    }
+}
