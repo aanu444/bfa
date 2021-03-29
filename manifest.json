@@ -1,0 +1,16 @@
+{
+    "name": "Black Female Authors",
+    "short_name": "BFA",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background-color": "#3b102c",
+    "theme_color": "#3b102c",
+    "orientation": "portrait-primary",
+    "icons":[
+        {
+            "src": "images/bfalogo.png",
+            "type":"image/png",
+            "sizes":"500*500"
+        }
+    ]
+}
