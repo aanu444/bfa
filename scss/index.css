@@ -684,6 +684,9 @@ footer .contact .content .content-container .content a {
   footer .connect .sm-content {
     display: none;
   }
+  footer .connect .sx-content {
+    display: block;
+  }
   footer .services {
     min-height: 400px;
   }
