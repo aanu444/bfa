@@ -31,23 +31,31 @@ nav .nav .links {
   background-color: #3c2f37;
 }
 
-nav .nav .links ul {
+nav .nav .links .nav-ml {
   list-style-type: none;
   font-family: 'Roboto', sans-serif;
 }
 
-nav .nav .links ul li {
+nav .nav .links .nav-ml li {
   display: inline;
   margin-left: 50px;
 }
 
-nav .nav .links ul li a {
+nav .nav .links .nav-ml li a {
   color: #fff;
   text-decoration: none;
 }
 
-nav .nav .links ul li:first-child {
+nav .nav .links .nav-ml li:first-child {
   margin-left: 300px;
+}
+
+nav .nav .links .nav-mx {
+  display: none;
+}
+
+nav .nav .links .dropdown-nav {
+  display: none;
 }
 
 header .header {
@@ -136,6 +144,10 @@ section .about .image {
       flex-basis: 40%;
   background: url("../images/boldwoman.jpg");
   background-size: cover;
+}
+
+section .about .image .content-img {
+  display: none;
 }
 
 section .books {
@@ -254,7 +266,7 @@ footer .connect {
   display: flex;
   -ms-flex-wrap: row nowrap;
       flex-wrap: row nowrap;
-  min-height: 100px;
+  min-height: 1000px;
 }
 
 footer .connect .content {
@@ -307,8 +319,8 @@ footer .connect .text-image .text-cover {
 }
 
 footer .connect .text-image .text-cover .image {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
 footer .connect .text-image .text-cover .image img {
@@ -317,8 +329,8 @@ footer .connect .text-image .text-cover .image img {
 }
 
 footer .connect .text-image .text-cover .content {
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
 footer .connect .text-image .text-cover .content p {
@@ -345,11 +357,15 @@ footer .connect .text-image .text-cover .content button a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  @Include fontRoboto;
+  font-family: 'Roboto', sans-serif;
 }
 
 footer .connect .text-image .text-cover:first-child {
   margin-top: 30px;
+}
+
+footer .connect .sx-content {
+  display: none;
 }
 
 footer .services {
@@ -358,7 +374,7 @@ footer .services {
   display: flex;
   -ms-flex-wrap: row nowrap;
       flex-wrap: row nowrap;
-  height: 400px;
+  min-height: 800px;
   background-color: #fff;
 }
 
@@ -397,9 +413,11 @@ footer .services .content span {
 footer .services .image {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  background-image: url("../images/head.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+}
+
+footer .services .image img {
+  width: 100%;
+  height: 100%;
 }
 
 footer .contact {
@@ -409,19 +427,351 @@ footer .contact {
   -ms-flex-wrap: row nowrap;
       flex-wrap: row nowrap;
   background-color: #fff;
-  height: 500px;
+  min-height: 500px;
 }
 
 footer .contact .image {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  background: url("../images/call.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+}
+
+footer .contact .image img {
+  width: 100%;
+  height: 100%;
 }
 
 footer .contact .content {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+}
+
+footer .contact .content h1 {
+  font-family: 'Dancing Script', cursive;
+  color: #3b102c;
+  text-align: center;
+  font-size: 3.5rem;
+  margin-top: 60px;
+}
+
+footer .contact .content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+footer .contact .content .content-container {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: row nowrap;
+      flex-wrap: row nowrap;
+  margin: 0 auto;
+  min-height: 50px;
+}
+
+footer .contact .content .content-container .image {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+footer .contact .content .content-container .image img {
+  width: 70%;
+  height: 70px;
+}
+
+footer .contact .content .content-container .content {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+footer .contact .content .content-container .content p {
+  font-family: 'Roboto', sans-serif;
+  color: #3b102c;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+footer .contact .content .content-container .content a {
+  color: #000000;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (max-width: 767px) {
+  div {
+    border: 0px solid black;
+  }
+  nav .nav .links .nav-ml {
+    display: none;
+  }
+  nav .nav .links .nav-mx {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+  }
+  nav .nav .links .dropdown-nav {
+    display: none;
+    position: absolute;
+    background-color: #3b102c;
+    min-width: 100%;
+    z-index: 1;
+    min-height: 100px;
+  }
+  nav .nav .links .dropdown-nav .nav-ms {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  nav .nav .links .dropdown-nav .nav-ms li {
+    text-align: center;
+    margin-top: 10px;
+  }
+  nav .nav .links .dropdown-nav .nav-ms li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+  }
+  nav .nav:hover .dropdown-nav {
+    display: block;
+  }
+  header .header {
+    height: 250px;
+  }
+  header .header .header-content img {
+    margin-top: 0;
+  }
+  header .header .header-content p {
+    font-size: 1.5rem;
+  }
+  section .about {
+    height: 400px;
+  }
+  section .about .content {
+    display: none;
+  }
+  section .about .image {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    background-image: url("../images/shelf.jpg");
+  }
+  section .about .image .content-img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  section .about .image .content-img .content-contain {
+    width: 70%;
+    min-height: 250px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 70px;
+  }
+  section .about .image .content-img .content-contain h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    color: #3b102c;
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  section .about .image .content-img .content-contain p {
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+  }
+  section .about .image .content-img .content-contain span {
+    font-family: 'Dancing Script', cursive;
+    display: block;
+    text-align: center;
+    color: #3b102c;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  section .books {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section .books .content {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  section .books .content h1 {
+    text-align: center;
+  }
+  section .books .content h3 {
+    text-align: center;
+  }
+  section .books .content p {
+    text-align: center;
+  }
+  section .books .image {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  section .books .image img {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section .videos {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section .videos .content h1 {
+    font-size: 3rem;
+  }
+  section .videos .visual {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  footer .connect {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer .connect .content {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  footer .connect .content h2 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-left: 0;
+  }
+  footer .connect .content p {
+    text-align: center;
+    margin-left: 0;
+  }
+  footer .connect .content span {
+    text-align: center;
+    font-size: 1rem;
+    margin-left: 0;
+  }
+  footer .connect .text-image {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  footer .connect .text-image .text-cover {
+    height: 300px;
+  }
+  footer .connect .text-image .text-cover .image img {
+    height: 100%;
+  }
+  footer .connect .text-image .text-cover .content p {
+    padding: 0;
+    font-size: 0.7rem;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 80px;
+  }
+  footer .connect .text-image .text-cover .content button {
+    padding: 5px;
+  }
+  footer .connect .text-image .text-cover .content button a {
+    font-weight: lighter;
+    font-size: 0.7rem;
+  }
+  footer .connect .text-image .text-cover:first-child {
+    margin-top: 0;
+  }
+  footer .connect .sm-content {
+    display: none;
+  }
+  footer .services {
+    min-height: 400px;
+  }
+  footer .services .content h1 {
+    font-size: 2rem;
+  }
+  footer .services .content p {
+    font-size: 1rem;
+    font-weight: lighter;
+  }
+  footer .services .content span {
+    font-size: 1rem;
+    padding: 5px;
+  }
+  footer .contact {
+    height: 250px;
+    background-color: #dbdbde;
+  }
+  footer .contact .image {
+    display: none;
+  }
+  footer .contact .content {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  footer .contact .content h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  footer .contact .content img {
+    width: 100%;
+    height: 100px;
+  }
+  footer .contact .content .content-container {
+    width: 80%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer .contact .content .content-container .content {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  footer .contact .content .content-container .content p {
+    text-align: center;
+  }
+  footer .contact .content .content-container .content a {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  div {
+    border: 0px solid black;
+  }
+  section .about .image .content-img .content-contain h1 {
+    font-size: 1.5rem;
+  }
+  footer .connect .content h2 {
+    margin-top: 180px;
+  }
+  footer .connect .text-image .text-cover {
+    height: 200px;
+  }
+  footer .connect .text-image .text-cover .content p {
+    font-size: 0.5rem;
+    margin-top: 40px;
+  }
+  footer .connect .text-image .text-cover .content button {
+    padding: 2px;
+  }
+  footer .connect .text-image .text-cover .content button a {
+    font-size: 0.5rem;
+  }
+  footer .services {
+    min-height: 100px;
+  }
+  footer .services .content {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  footer .services .image {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  section .about .image .content-img .content-contain span {
+    display: none;
+  }
 }
 /*# sourceMappingURL=index.css.map */
