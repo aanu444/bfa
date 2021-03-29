@@ -501,7 +501,7 @@ footer .contact .content .content-container .content a {
 
 @media only screen and (max-width: 767px) {
   div {
-    border: 1px solid black;
+    border: 0px solid black;
   }
   nav .nav .links .nav-ml {
     display: none;
@@ -750,10 +750,13 @@ footer .contact .content .content-container .content a {
 
 @media only screen and (max-width: 426px) {
   div {
-    border: 1px solid black;
+    border: 0px solid black;
   }
   section .about .image .content-img .content-contain h1 {
     font-size: 1.5rem;
+  }
+  section .about .image .content-img .content-contain span {
+    display: none;
   }
   section .books .image img {
     width: 100%;
@@ -794,7 +797,7 @@ footer .contact .content .content-container .content a {
 
 @media only screen and (max-width: 321px) {
   div {
-    border: 1px solid black;
+    border: 0px solid black;
   }
   section .about .image .content-img .content-contain span {
     display: none;
