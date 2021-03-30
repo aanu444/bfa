@@ -97,6 +97,20 @@ section {
   background-color: #d7ccd3;
 }
 
+section .space {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: row nowrap;
+      flex-wrap: row nowrap;
+  height: 100px;
+}
+
+section .space .upper-space {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
 section .about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -258,6 +272,25 @@ section .videos .visual iframe {
 
 footer {
   background-color: #3c2f37;
+}
+
+footer .space {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: row nowrap;
+      flex-wrap: row nowrap;
+  height: 100px;
+  background-color: #3c2f37;
+}
+
+footer .space .upper-space {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+footer .space-xm {
+  display: none;
 }
 
 footer .connect {
@@ -547,6 +580,9 @@ footer .contact .content .content-container .content a {
   header .header .header-content p {
     font-size: 1.5rem;
   }
+  section .space {
+    height: 50px;
+  }
   section .about {
     height: 400px;
   }
@@ -641,6 +677,12 @@ footer .contact .content .content-container .content a {
   section .videos .visual iframe {
     width: 100%;
   }
+  footer .space {
+    height: 50px;
+  }
+  footer .space-xm {
+    display: block;
+  }
   footer .connect {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -669,7 +711,7 @@ footer .contact .content .content-container .content a {
         flex-basis: 100%;
   }
   footer .connect .text-image .text-cover {
-    height: 500px;
+    height: 300px;
     width: 90%;
   }
   footer .connect .text-image .text-cover .image img {
@@ -699,7 +741,7 @@ footer .contact .content .content-container .content a {
     display: block;
   }
   footer .services {
-    min-height: 400px;
+    min-height: 200px;
   }
   footer .services .content h1 {
     font-size: 2rem;
@@ -801,6 +843,28 @@ footer .contact .content .content-container .content a {
   }
   section .about .image .content-img .content-contain span {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  div {
+    border: 0px solid black;
+  }
+  nav .nav .links .nav-ml li:first-child {
+    margin-left: 80px;
+  }
+  section .space {
+    height: 50px;
+  }
+  section .about .content span {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  section .videos .visual iframe {
+    width: 90%;
+  }
+  .footer .space {
+    height: 50px;
   }
 }
 /*# sourceMappingURL=index.css.map */
