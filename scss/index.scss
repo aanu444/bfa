@@ -58,6 +58,7 @@ nav{
                     a{
                         color:#fff;
                         text-decoration:none;
+                        font-size:0.8rem;
                     }
                 }
                 li:first-child{
@@ -160,6 +161,7 @@ section{
             flex-basis:40%;
             background:url("../images/boldwoman.jpg");
             background-size:cover;
+            background-repeat:no-repeat;
 
             .content-img{
                 display:none;
@@ -282,6 +284,16 @@ footer{
         display:none;
     }
 
+    .space-xxl{
+        @include flexRow;
+        height:50px;
+        background-color:#3c2f37;
+
+        .upper-space{
+            flex-basis:100%;
+        }
+    }
+
     .connect{
         @include flexRow;
         min-height:1000px;
@@ -323,7 +335,7 @@ footer{
 
             .text-cover{
                 @include flexRow;
-                width:70%;
+                width:80%;
                 margin:0 auto;
                 background-color:#fff;
                 min-height:100px;
@@ -342,11 +354,12 @@ footer{
                     flex-basis:50%;
 
                     p{
+                        margin-left:0px;
                         text-align:center;
-                        padding:20px;
+                        padding:40px;
                         @include fontRoboto;
                         font-weight:bold;
-                        font-size:1rem;
+                        font-size:1.5rem;
                         color:#000000;
                         margin-top:40px;
                     }
@@ -365,6 +378,7 @@ footer{
                             color:#fff;
                             font-weight:bold;
                             @include fontRoboto;
+                            font-size:1rem;
                         }
                     }
 
@@ -383,7 +397,7 @@ footer{
 
     .services{
         @include flexRow;
-        min-height:800px;
+        min-height:500px;
         background-color:#fff;
         
         .content{
@@ -430,10 +444,11 @@ footer{
     .contact{
         @include flexRow;
         background-color:#fff;
-        min-height:500px;
+        min-height:100px;
 
         .image{
             flex-basis:50%;
+           
 
             img{
             width:100%;
@@ -470,7 +485,10 @@ footer{
 
                     img{
                     width:70%;
-                    height:70px;
+                    height:70%;
+                    display:block;
+                    margin-left:auto;
+                    margin-right:auto;
                     }
                 }
 
@@ -694,6 +712,10 @@ footer{
 
         .space-xm{
             display:block;
+        }
+
+        .space-xxl{
+            display:none;
         }
 
         .connect{
@@ -931,7 +953,6 @@ footer{
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px){
-   
 
     div{
         border:0px solid black;
@@ -972,9 +993,246 @@ footer{
         }
     }
 
-    .footer{
+    footer{
         .space{
             height:50px;
+        }
+        
+        .connect{
+            min-height:300px;
+            .text-image{
+                .text-cover{
+                    width:80%;
+                    height:300px;
+
+
+                    .content{
+                        p{
+                            font-size:0.7rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .services{
+            min-height:300px;
+
+            .content{
+                h1{
+                    font-size:3rem;
+                }
+
+                p{
+                    font-size:1rem;
+                }
+
+                span{
+                    font-size:1rem;
+                }
+            }
+        }
+
+        .space-xl{
+            display:block;
+        }
+
+        .space-xxl{
+            display:none;
+        }
+
+        .contact{
+            .content{
+            .content-container{
+                min-width:80%;
+            }
+        }
+        }
+    }
+}
+
+@media only screen and (min-width:1555px){
+    body{
+        min-width:2500px;
+    }
+
+    div{
+        border:0px solid black;
+    }
+
+    nav{
+        .nav{
+            .links{
+                .nav-ml{
+                    li{
+                        a{
+                            font-size:2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    header{
+        .header{
+            min-height:600px;
+
+            .header-content{
+
+            img{
+                height:70%;
+
+            }
+
+            p{
+                font-size:3rem;
+            }
+
+        }
+        }
+    }
+
+    section{
+        .about{
+            min-height:750px;
+            .content{
+                h1{
+                    font-size:8rem;
+                    margin-top:0;
+                }
+
+                p{
+                    font-size:2.5rem;
+                }
+
+                span{
+                    font-size:3rem;
+                    margin-left:50px;
+                    margin-right:50px;
+                }
+            }
+        }
+
+        .books{
+            .content{
+                h1{
+                    font-size:6rem;
+                }
+
+                h3{
+                    font-size:4rem;
+                }
+
+                p{
+                    font-size:2rem;
+                }
+            }
+
+            .image{
+                p{
+                    a{
+                        font-size:2rem;
+                    }
+                }
+            }
+        }
+
+        .videos{
+            .content{
+                h1{
+                    font-size:8rem;
+                }
+            }
+
+            .image{
+                iframe{
+                    width:100%;
+                    height:100%;
+                }
+            }
+        }
+    }
+
+
+    footer{
+        .connect{
+            .content{
+                h2{
+                    font-size:3rem;
+                }
+
+                p{
+                    font-size:6rem;
+                }
+
+                span{
+                    font-size:2.6rem;
+                }
+            }
+
+            .text-image{
+                .text-cover{
+                   
+                    .content{
+                        p{
+                            font-size:2.8rem;
+                            margin-top:150px;
+                        }
+
+                        button{
+                            a{
+                                font-size:2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .services{
+            .content{
+                h1{
+                    font-size:6rem;
+                }
+
+                p{
+                    font-size:3rem;
+                }
+
+                span{
+                    font-size:3rem;
+                }
+            }
+        }
+
+        .contact{
+            .content{
+                h1{
+                    font-size:6rem;
+                }
+
+                img{
+                    width:50%;
+                }
+
+                .content-container{
+                    min-width:90%;
+
+                        .content{
+                            p{
+                                font-size:2.5rem;
+                            }
+
+                            a{
+                                font-size:2rem;
+                            }
+                        }
+
+                }
+
+
+            }
         }
     }
 }

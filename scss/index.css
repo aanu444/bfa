@@ -44,6 +44,7 @@ nav .nav .links .nav-ml li {
 nav .nav .links .nav-ml li a {
   color: #fff;
   text-decoration: none;
+  font-size: 0.8rem;
 }
 
 nav .nav .links .nav-ml li:first-child {
@@ -158,6 +159,7 @@ section .about .image {
       flex-basis: 40%;
   background: url("../images/boldwoman.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 section .about .image .content-img {
@@ -293,6 +295,21 @@ footer .space-xm {
   display: none;
 }
 
+footer .space-xxl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: row nowrap;
+      flex-wrap: row nowrap;
+  height: 50px;
+  background-color: #3c2f37;
+}
+
+footer .space-xxl .upper-space {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
 footer .connect {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -345,7 +362,7 @@ footer .connect .text-image .text-cover {
   display: flex;
   -ms-flex-wrap: row nowrap;
       flex-wrap: row nowrap;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   background-color: #fff;
   min-height: 100px;
@@ -367,11 +384,12 @@ footer .connect .text-image .text-cover .content {
 }
 
 footer .connect .text-image .text-cover .content p {
+  margin-left: 0px;
   text-align: center;
-  padding: 20px;
+  padding: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #000000;
   margin-top: 40px;
 }
@@ -391,6 +409,7 @@ footer .connect .text-image .text-cover .content button a {
   color: #fff;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
 }
 
 footer .connect .text-image .text-cover:first-child {
@@ -407,7 +426,7 @@ footer .services {
   display: flex;
   -ms-flex-wrap: row nowrap;
       flex-wrap: row nowrap;
-  min-height: 800px;
+  min-height: 500px;
   background-color: #fff;
 }
 
@@ -460,7 +479,7 @@ footer .contact {
   -ms-flex-wrap: row nowrap;
       flex-wrap: row nowrap;
   background-color: #fff;
-  min-height: 500px;
+  min-height: 100px;
 }
 
 footer .contact .image {
@@ -511,7 +530,10 @@ footer .contact .content .content-container .image {
 
 footer .contact .content .content-container .image img {
   width: 70%;
-  height: 70px;
+  height: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 footer .contact .content .content-container .content {
@@ -682,6 +704,9 @@ footer .contact .content .content-container .content a {
   }
   footer .space-xm {
     display: block;
+  }
+  footer .space-xxl {
+    display: none;
   }
   footer .connect {
     -ms-flex-wrap: wrap;
@@ -863,8 +888,134 @@ footer .contact .content .content-container .content a {
   section .videos .visual iframe {
     width: 90%;
   }
-  .footer .space {
+  footer .space {
     height: 50px;
+  }
+  footer .connect {
+    min-height: 300px;
+  }
+  footer .connect .text-image .text-cover {
+    width: 80%;
+    height: 300px;
+  }
+  footer .connect .text-image .text-cover .content p {
+    font-size: 0.7rem;
+  }
+  footer .services {
+    min-height: 300px;
+  }
+  footer .services .content h1 {
+    font-size: 3rem;
+  }
+  footer .services .content p {
+    font-size: 1rem;
+  }
+  footer .services .content span {
+    font-size: 1rem;
+  }
+  footer .space-xl {
+    display: block;
+  }
+  footer .space-xxl {
+    display: none;
+  }
+  footer .contact .content .content-container {
+    min-width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1555px) {
+  body {
+    min-width: 2500px;
+  }
+  div {
+    border: 0px solid black;
+  }
+  nav .nav .links .nav-ml li a {
+    font-size: 2rem;
+  }
+  header .header {
+    min-height: 600px;
+  }
+  header .header .header-content img {
+    height: 70%;
+  }
+  header .header .header-content p {
+    font-size: 3rem;
+  }
+  section .about {
+    min-height: 750px;
+  }
+  section .about .content h1 {
+    font-size: 8rem;
+    margin-top: 0;
+  }
+  section .about .content p {
+    font-size: 2.5rem;
+  }
+  section .about .content span {
+    font-size: 3rem;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  section .books .content h1 {
+    font-size: 6rem;
+  }
+  section .books .content h3 {
+    font-size: 4rem;
+  }
+  section .books .content p {
+    font-size: 2rem;
+  }
+  section .books .image p a {
+    font-size: 2rem;
+  }
+  section .videos .content h1 {
+    font-size: 8rem;
+  }
+  section .videos .image iframe {
+    width: 100%;
+    height: 100%;
+  }
+  footer .connect .content h2 {
+    font-size: 3rem;
+  }
+  footer .connect .content p {
+    font-size: 6rem;
+  }
+  footer .connect .content span {
+    font-size: 2.6rem;
+  }
+  footer .connect .text-image .text-cover .content p {
+    font-size: 2.8rem;
+    margin-top: 150px;
+  }
+  footer .connect .text-image .text-cover .content button a {
+    font-size: 2rem;
+  }
+  footer .services .content h1 {
+    font-size: 6rem;
+  }
+  footer .services .content p {
+    font-size: 3rem;
+  }
+  footer .services .content span {
+    font-size: 3rem;
+  }
+  footer .contact .content h1 {
+    font-size: 6rem;
+  }
+  footer .contact .content img {
+    width: 50%;
+  }
+  footer .contact .content .content-container {
+    min-width: 90%;
+  }
+  footer .contact .content .content-container .content p {
+    font-size: 2.5rem;
+  }
+  footer .contact .content .content-container .content a {
+    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=index.css.map */
